@@ -222,7 +222,7 @@ func writeConfig(conf XrayConfig) {
 
 // Запуск xray.exe
 func runXray(logFn func(string)) error {
-	cmd := exec.Command("bin/xray.exe", "-config", "config.json")
+	cmd := exec.Command("bin/xray.exe", "-config", "bin/config.json")
 	currentCmd = cmd // Сохраняем текущую команду
 
 	stdout, _ := cmd.StdoutPipe()
